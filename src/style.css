@@ -1,1 +1,14 @@
 @import 'tailwindcss';
+
+body {
+    @apply bg-gray-950 text-gray-200;
+}
+
+/* 
+COLOR           HEX     FUNCIÓN SUGERIDA                                            TAILWIND COLOR
+Negro Profundo  #030712 Fondo principal. Casi negro, muy moderno.                   gray-950
+Azul Oscuro     #111827 Superficies. Para las tarjetas de proyectos o el Navbar.    gray-900
+Vino Sangre     #4C0519 Acento / Destacado. Para botones o detalles brillantes.     rose-950
+Gris Plata      #D1D5DB Texto secundario. Suave para descripciones.                 gray-400
+Gris Blanco     #E5E7EB Texto principal / Títulos. Máximo contraste.                gray-200
+*/
