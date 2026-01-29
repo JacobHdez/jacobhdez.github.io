@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 const isMenuOpen = ref(false);
 
 const toggleLanguage = () => {
@@ -18,15 +18,15 @@ const toggleMenu = () => {
   <nav class="max-w-6xl mx-auto px-4">
     <div class="flex items-center justify-between h-16">
       <a href="/" class="text-xl font-bold text-gray-200 hover:text-rose-950 transition-colors">
-        {{ $t('title') }}
+        {{ t('title') }}
       </a>
 
       <div class="hidden md:flex space-x-8 items-center text-sm font-medium text-gray-400">
-        <a href="/" class="hover:text-gray-200 transition-colors">{{ $t('header.prog') }}</a>
-        <a href="/" class="hover:text-gray-200 transition-colors">{{ $t('header.games') }}</a>
-        <a href="/" class="hover:text-gray-200 transition-colors">{{ $t('header.about') }}</a>
+        <a href="#projects" class="hover:text-gray-200 transition-colors">{{ t('header.prog') }}</a>
+        <a href="#projects" class="hover:text-gray-200 transition-colors">{{ t('header.games') }}</a>
+        <a href="#about" class="hover:text-gray-200 transition-colors">{{ t('header.about') }}</a>
 
-        <a href="/" class="bg-rose-950 hover:opacity-90 text-gray-200 px-5 py-2 rounded-full transition-all">{{ $t('header.contact') }}</a>
+        <a href="#contact" class="bg-rose-950 hover:opacity-90 text-gray-200 px-5 py-2 rounded-full transition-all">{{ t('header.contact') }}</a>
       
 
         <button
@@ -63,11 +63,11 @@ const toggleMenu = () => {
     v-show="isMenuOpen"
     class="md:hidden px-4 pt-2 pb-6 space-y-1 text-gray-400"
   >
-    <a href="/" @click="isMenuOpen = false" class="block hover:text-gray-200 transition-colors">{{ $t('header.prog') }}</a>
-    <a href="/" @click="isMenuOpen = false" class="block hover:text-gray-200 transition-colors">{{ $t('header.games') }}</a>
-    <a href="/" @click="isMenuOpen = false" class="block hover:text-gray-200 transition-colors">{{ $t('header.about') }}</a>
+    <a href="#projects" @click="isMenuOpen = false" class="block hover:text-gray-200 transition-colors">{{ t('header.prog') }}</a>
+    <a href="#projects" @click="isMenuOpen = false" class="block hover:text-gray-200 transition-colors">{{ t('header.games') }}</a>
+    <a href="#about" @click="isMenuOpen = false" class="block hover:text-gray-200 transition-colors">{{ t('header.about') }}</a>
     
-    <a href="/" @click="isMenuOpen = false" class="block bg-rose-950 hover:opacity-90 text-gray-200 text-center py-2 rounded-full transition-all">{{ $t('header.contact') }}</a>
+    <a href="#contact" @click="isMenuOpen = false" class="block bg-rose-950 hover:opacity-90 text-gray-200 text-center py-2 rounded-full transition-all">{{ t('header.contact') }}</a>
   </nav>
 </header>
 </template>

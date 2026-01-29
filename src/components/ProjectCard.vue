@@ -4,7 +4,7 @@ import type { Project } from '../data/projects';
 
 defineProps<{ project: Project }>();
 
-const { locale } = useI18n();
+const { locale, t } = useI18n();
 </script>
 
 <template>
@@ -15,7 +15,7 @@ const { locale } = useI18n();
 
   <div class="p-6">
     <span class="text-xs uppercase tracking-widest text-accent font-bold">
-      {{ project.category === 'Programming' ? $t('categories.prog') : $t('categories.games') }}
+      {{ project.category === 'Programming' ? t('categories.prog') : t('categories.games') }}
     </span>
     <h3 class="text-xl font-bold text-gray-200 mt-1">
       {{ project.title[locale] }}
