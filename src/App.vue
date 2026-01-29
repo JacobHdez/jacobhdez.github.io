@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import Header from './components/Header.vue';
 import Hero from './views/Hero.vue';
+import Footer from './components/Footer.vue';
 import ProjectCard from './components/ProjectCard.vue';
 import { projects } from './data/projects';
 </script>
@@ -27,5 +28,7 @@ import { projects } from './data/projects';
       />
     </div>
   </main>
+
+  <Footer />
 </div>
 </template>
