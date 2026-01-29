@@ -50,7 +50,7 @@ const currentYear = new Date().getFullYear()
 
     <div class="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400 uppercase tracking-widest">
       <p>
-        &copy; {{ currentYear }} - Made with Vite + Vue 3
+        &copy; {{ currentYear }} - Made with Vite + Vue 3 + TailwindCSS
       </p>
       <div class="flex items-center gap-4">
         <span>
