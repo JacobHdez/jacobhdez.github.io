@@ -15,7 +15,7 @@ const { t } = useI18n()
 
     <div class="relative z-10 text-center px-4 max-w-4xl">
         <span class="inline-block py-1 px-3 rounded-full bg-rose-950/10 border border-rose-950/20 text-rose-950 text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in">
-            Unreal Engine 5 • C++ • Python • TS
+            Unreal Engine 5 &bull; C++ &bull; Python &bull; TS
         </span>
 
         <h1 class="text-5xl md:text-7xl font-black text-gray-200 -tracking-tighter mb-6 leading-tight">
