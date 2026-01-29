@@ -8,6 +8,10 @@ const messages = {
             games: 'Games',
             about: 'About Me',
             contact: 'Contact'
+        },
+        categories: {
+            prog: 'Programming',
+            games: 'Games'
         }
     },
     es: {
@@ -17,6 +21,10 @@ const messages = {
             games: 'Videojuegos',
             about: 'Sobre mí',
             contact: 'Contacto'
+        },
+        categories: {
+            prog: 'Programación',
+            games: 'Videojuegos'
         }
     },
 };
