@@ -18,7 +18,7 @@ const { t } = useI18n()
             Unreal Engine 5 &bull; C++ &bull; Python &bull; TS
         </span>
 
-        <h1 class="text-5xl md:text-7xl font-black text-gray-200 -tracking-tighter mb-6 leading-tight">
+        <h1 class="text-5xl md:text-7xl font-black text-gray-200 tracking-tighter mb-6 leading-tight">
             {{ t('hero.title') }}
         </h1>
 
