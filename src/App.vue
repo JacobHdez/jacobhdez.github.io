@@ -1,20 +1,28 @@
 <script setup lang="ts">
 import Header from './components/Header.vue';
+import ProjectCard from './components/ProjectCard.vue';
+import { projects } from './data/projects';
 </script>
 
 <template>
-<div class="min-h-screen">
+<div class="min-h-screen bg-gray-950 text-gray-200 font-sans antialiased">
   <Header />
   
-  <main class="pt-20 px-4">
-    <section class="max-w-6xl mx-auto text-center py-20">
-      <h2 class="text-5xl font-extrabold text-gray-200 mb-4">
-        Hola, soy Desarrollador
+  <main class="max-w-6xl mx-auto pt-28 px-4 pb-20">
+    <header class="mb-12">
+      <h2>
+        Trabajos <span class="text-accents">Recientes</span>
       </h2>
-      <p class="text-gray-400 text-xl">
-        Bienvenido a mi espacio de código y juegos.
-      </p>
-    </section>
+      <div class="h-1 w-20 bg-rose-950 mt-2"></div>
+    </header>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <ProjectCard
+        v-for="project in projects"
+        :key="project.id"
+        :project="project"
+      />
+    </div>
   </main>
 </div>
 </template>
