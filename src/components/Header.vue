@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import { ref } from 'vue'
-import { useI18n } from 'vue-i18n'
+import { ref } from 'vue';
+import { useI18n } from 'vue-i18n';
 
-const { locale } = useI18n()
-const isMenuOpen = ref(false)
+const { locale } = useI18n();
+const isMenuOpen = ref(false);
 
 const toggleLanguage = () => {
-  locale.value = locale.value === 'es' ? 'en' : 'es'
-}
+  locale.value = locale.value === 'es' ? 'en' : 'es';
+};
 const toggleMenu = () => {
-  isMenuOpen.value = !isMenuOpen.value
-}
+  isMenuOpen.value = !isMenuOpen.value;
+};
 </script>
 
 <template>
