@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import BaseLink from '../components/ui/BaseLink.vue';
+
 import { useI18n } from 'vue-i18n';
 import { useIntersection } from '../composables/useIntersection';
 
@@ -37,18 +39,12 @@ const { target, isVisible } = useIntersection(0.2, true);
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <a
-                href="#projects"
-                class="w-full sm:w-auto px-8 py-4 bg-rose-950 text-gray-200 font-bold rounded-xl hover:scale-105 transition-transform shadow-lg shadow-rose-950/20"
-            >
+            <BaseLink href="#projects" variant="primary" class="w-full sm:w-auto">
                 {{ t('header.prog') }}
-            </a>
-            <a
-                href="#contact"
-                class="w-full sm:w-auto px-8 py-4 bg-transparent border border-white/10 text-gray-200 font-bold rounded-xl hover:bg-white/5 transition-colors"
-            >
+            </BaseLink>
+            <BaseLink href="#contact" variant="secondary" class="w-full sm:w-auto">
                 {{ t('header.contact') }}
-            </a>
+            </BaseLink>
         </div>
     </div>
 </section>
