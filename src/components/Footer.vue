@@ -71,7 +71,7 @@ const currentYear = new Date().getFullYear()
       </p>
       <div class="flex items-center gap-4">
         <span>
-          {{ t('header.contact') }}: user@example.com
+          {{ t('header.contact') }}: jacobo.hdezv@gmail.com
         </span>
         <span class="text-rose-950 font-bold">
           //Dev.Mode

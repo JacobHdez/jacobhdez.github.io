@@ -8,6 +8,7 @@ import Hero from './views/Hero.vue';
 import ProjectCard from './components/ProjectCard.vue';
 import Skills from './components/Skills.vue';
 import AboutMe from './components/AboutMe.vue';
+import Contact from './components/Contact.vue';
 
 import { projects } from './data/projects';
 
@@ -64,6 +65,8 @@ const filteredProjects = computed( () => {
   <Skills />
 
   <AboutMe />
+
+  <Contact />
 
   <Footer />
 </div>
