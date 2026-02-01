@@ -34,7 +34,7 @@ const linkClasses = computed( () => [
   :target="external ? '_blank' : undefined"
   :rel="external ? 'noopener noreferrer' : undefined"
   :class="linkClasses"
-  class="inline-flex items-center justify-center gap-1 rounded-xl"
+  class="inline-flex items-center justify-center gap-2 rounded-xl"
 >
   <slot />
 </a>
