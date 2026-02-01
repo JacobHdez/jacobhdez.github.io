@@ -3,7 +3,7 @@ import { useI18n } from 'vue-i18n';
 import { useIntersection } from '../composables/useIntersection';
 
 const { t } = useI18n();
-const { target, isVisible } = useIntersection(0.2, true);
+const { target: _target, isVisible } = useIntersection(0.2, true);
 
 const skillGroups = [
     {
@@ -37,7 +37,7 @@ const skillGroups = [
       </p>
     </header>
 
-    <div ref="target" class="grid md:grid-cols-2 gap-12">
+    <div ref="_target" class="grid md:grid-cols-2 gap-12">
       <div
         v-for="group in skillGroups"
         :key="group.title"

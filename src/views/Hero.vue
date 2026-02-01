@@ -5,7 +5,7 @@ import { useI18n } from 'vue-i18n';
 import { useIntersection } from '../composables/useIntersection';
 
 const { t } = useI18n()
-const { target, isVisible } = useIntersection(0.2, true);
+const { target: _target, isVisible } = useIntersection(0.2, true);
 </script>
 
 <template>
@@ -20,7 +20,7 @@ const { target, isVisible } = useIntersection(0.2, true);
 
     <div class="relative z-10 text-center px-4 max-w-4xl">
         <span
-            ref="target"
+            ref="_target"
             class="inline-block mb-6 py-1 px-3 rounded-full bg-rose-950/10 border border-rose-950/20 text-rose-950 text-xs font-bold tracking-widest uppercase transition-all duration-1000 ease-out transform"
             :class="{
                 'opacity-0 translate-y-10': !isVisible,
