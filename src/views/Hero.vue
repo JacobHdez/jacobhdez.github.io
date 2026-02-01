@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
+import { useIntersection } from '../composables/useIntersection';
+
 const { t } = useI18n()
+const { target, isVisible } = useIntersection(0.2, true);
 </script>
 
 <template>
@@ -14,7 +17,14 @@ const { t } = useI18n()
     <div class="absolute bottom-1/4 -right-20 w-72 h-72 bg-blue-900/20 rounded-full blur-[120px]"></div>
 
     <div class="relative z-10 text-center px-4 max-w-4xl">
-        <span class="inline-block py-1 px-3 rounded-full bg-rose-950/10 border border-rose-950/20 text-rose-950 text-xs font-bold tracking-widest uppercase mb-6 animate-fade-in">
+        <span
+            ref="target"
+            class="inline-block mb-6 py-1 px-3 rounded-full bg-rose-950/10 border border-rose-950/20 text-rose-950 text-xs font-bold tracking-widest uppercase transition-all duration-1000 ease-out transform"
+            :class="{
+                'opacity-0 translate-y-10': !isVisible,
+                'opacity-100 translate-y-0': isVisible
+            }"
+        >
             Unreal Engine 5 &bull; C++ &bull; Python &bull; TS
         </span>
 
@@ -43,13 +53,3 @@ const { t } = useI18n()
     </div>
 </section>
 </template>
-
-<style scoped>
-@keyframes fade-in {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-.animate-fade-in {
-    animation: fade-in 1s ease-out;
-}
-</style>

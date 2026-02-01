@@ -1,15 +1,9 @@
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useIntersection } from '../composables/useIntersection';
 
 const { t } = useI18n();
-const animated = ref(false);
-
-onMounted( () => {
-  setTimeout( () => {
-    animated.value = true
-  }, 300 );
-} );
+const { target, isVisible } = useIntersection(0.2, true);
 
 const skillGroups = [
     {
@@ -43,7 +37,7 @@ const skillGroups = [
       </p>
     </header>
 
-    <div class="grid md:grid-cols-2 gap-12">
+    <div ref="target" class="grid md:grid-cols-2 gap-12">
       <div
         v-for="group in skillGroups"
         :key="group.title"
@@ -55,7 +49,7 @@ const skillGroups = [
 
         <div class="space-y-6">
           <div
-            v-for="skill in group.skills"
+            v-for="(skill, index) in group.skills"
             :key="skill.name"
           >
             <div class="flex justify-between mb-2">
@@ -69,8 +63,11 @@ const skillGroups = [
 
             <div class="h-2 w-full bg-gray-900 rounded-full overflow-hidden border border-white/10">
               <div
-                class="h-full bg-rose-950 transition-all duration-1000 ease-out relative"
-                :style="{ width: animated ? skill.level : '0%' }"
+                class="h-full bg-rose-950 transition-all duration-2500 ease-out relative"
+                :style="{
+                  width: isVisible ? skill.level : '0%',
+                  transitionDelay: isVisible ? `${index * 200}ms` : '0ms'
+                }"
               >
                 <div class="absolute inset-0 shadow-[0_0_15px_4px_rgba(76,5,25,0.8)]"></div>
               </div>
