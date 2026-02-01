@@ -29,7 +29,7 @@ const copyEmail = () => {
 
       <button
         @click="copyEmail"
-        class="flex items-center gap-3 bg-gray-950 border border-white/10 text-gray-400 px-8 py-4 rounded-xl font-bold transition-colors hover:bg-white/10"
+        class="inline-flex items-center justify-center gap-2 rounded-xl px-8 py-4 text-gray-400 font-bold bg-transparent border border-white/10 hover:bg-white/10 transition-colors"
       >
         <span class="text-xl"><i class="fa-solid fa-clipboard"></i></span>
         {{ email }}
