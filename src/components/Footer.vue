@@ -40,9 +40,9 @@ const currentYear = new Date().getFullYear()
             Social
           </h4>
           <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="https://github.com/JacobHdez" class="hover:text-rose-950 transition-colors">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/jacobohdezv/" class="hover:text-rose-950 transition-colors">LinkedIn</a></li>
-            <li><a href="https://discord.com/users/587370244855693343" class="hover:text-rose-950 transition-colors">Discord</a></li>
+            <li><a href="https://github.com/JacobHdez" target="_blank" class="hover:text-rose-950 transition-colors">GitHub</a></li>
+            <li><a href="https://www.linkedin.com/in/jacobohdezv/" target="_blank" class="hover:text-rose-950 transition-colors">LinkedIn</a></li>
+            <li><a href="https://discord.com/users/587370244855693343" target="_blank" class="hover:text-rose-950 transition-colors">Discord</a></li>
           </ul>
         </div>
       </div>
