@@ -10,7 +10,10 @@ export interface Project {
     };
     category: 'Games' | 'Programming';
     tech: string[];
-    link?: string;
+    links?: {
+        web?: string;
+        code?: string;
+    };
     image: string;
 }
 
@@ -27,7 +30,9 @@ export const projects: Project[] = [
         },
         category: 'Games',
         tech: ['Unreal Engine 5', 'C++'],
-        link: 'https://store.steampowered.com/app/3968040/Hollow_Stories_Lockdown/',
+        links: {
+            web: 'https://store.steampowered.com/app/3968040/Hollow_Stories_Lockdown/'
+        },
         image: '/images/projects/HollowStories_Lockdown.webp'
     },
     {
@@ -42,7 +47,10 @@ export const projects: Project[] = [
         },
         category: 'Programming',
         tech: ['Vite', 'Vue 3', 'TypeScript', 'TailwindCSS v4',],
-        link: 'https://hollowsense.github.io/',
+        links: {
+            web: 'https://hollowsense.github.io/',
+            code: 'https://github.com/hollowsense/hollowsense.github.io'
+        },
         image: '/images/projects/HollowSense_DevLog.webp'
     }
 ]

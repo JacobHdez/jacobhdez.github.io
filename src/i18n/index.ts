@@ -17,6 +17,10 @@ const messages = {
             prog: 'Programming',
             games: 'Games'
         },
+        card: {
+            web: 'Website',
+            code: 'Code'
+        },
         about: {
             title: 'About Me',
             p1: 'I am a Software and Data Engineer with a passion for transforming complex ideas into simple, high-impact solutions. My background combines logical thinking with a human perspective, allowing me to approach technical challenges with both critical analysis and empathy.',
@@ -44,6 +48,10 @@ const messages = {
         categories: {
             prog: 'Programación',
             games: 'Videojuegos'
+        },
+        card: {
+            web: 'Sitio Web',
+            code: 'Código'
         },
         about: {
             title: 'Sobre Mí',
