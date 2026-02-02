@@ -6,10 +6,12 @@ import Header from './components/Header.vue';
 import Footer from './components/Footer.vue';
 import Hero from './views/Hero.vue';
 import ProjectCard from './components/ProjectCard.vue';
+import ProjectModal from './components/ProjectModal.vue';
 import Skills from './components/Skills.vue';
 import AboutMe from './components/AboutMe.vue';
 import Contact from './components/Contact.vue';
 
+import type { Project } from './data/projects';
 import { projects } from './data/projects';
 
 const { locale, t } = useI18n();
@@ -19,6 +21,14 @@ const filteredProjects = computed( () => {
   if ( filter.value === 'All' ) return projects;
   return projects.filter( p => p.category === filter.value );
 } );
+
+const selectedProject = ref<Project | null>(null);
+const isModalOpen = ref(false);
+
+const openProject = ( project: Project ) => {
+  selectedProject.value = project;
+  isModalOpen.value = true;
+};
 </script>
 
 <template>
@@ -56,8 +66,16 @@ const filteredProjects = computed( () => {
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
       <ProjectCard
         v-for="project in filteredProjects"
+        @click="openProject(project)"
         :key="project.id"
         :project="project"
+        class="cursor-pointer"
+      />
+
+      <ProjectModal
+        :project="selectedProject"
+        :is-open="isModalOpen"
+        @close="isModalOpen = false"
       />
     </div>
   </main>
