@@ -53,10 +53,10 @@ const { t } = useI18n();
                   class="h-5 w-5 transition-colors duration-300 group-hover:text-neutral-100"
                 />
                 <a
-                  :href="item.section"
+                  :href="`#${item.section}`"
                   class="transition-colors duration-300 group-hover:text-neutral-100"
                 >
-                  {{ t(`nav.${item.labelKey}`) }}
+                  {{ t(`nav.${item.section}`) }}
                   <span class="absolute inset-0"></span>
                 </a>
               </li>

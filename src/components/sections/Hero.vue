@@ -18,11 +18,11 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative h-screen w-full">
+  <div class="relative h-screen w-full" id="home">
     <div class="absolute inset-0 aspect-video h-screen w-full overflow-hidden">
       <img :src="personalData.hero" :alt="personalData.name" class="h-full w-full object-cover" />
 
-      <div class="absolute inset-0 bg-black/50"></div>
+      <div class="absolute inset-0 bg-black/30 transition-all duration-700 dark:bg-black/60"></div>
     </div>
 
     <section class="relative flex h-3/4 w-full flex-col items-start justify-center gap-y-4 pl-8">

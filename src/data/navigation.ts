@@ -9,9 +9,9 @@ import {
 } from '@heroicons/vue/24/solid';
 
 export const navigationItems: NavigationItem[] = [
-  { section: '#', labelKey: 'home', icon: HomeIcon },
-  { section: '#', labelKey: 'about', icon: UserIcon },
-  { section: '#', labelKey: 'resume', icon: DocumentTextIcon },
-  { section: '#', labelKey: 'portfolio', icon: RectangleGroupIcon },
-  { section: '#', labelKey: 'contact', icon: EnvelopeIcon }
+  { section: 'home', icon: HomeIcon },
+  { section: 'about', icon: UserIcon },
+  { section: 'resume', icon: DocumentTextIcon },
+  { section: 'portfolio', icon: RectangleGroupIcon },
+  { section: 'contact', icon: EnvelopeIcon }
 ];

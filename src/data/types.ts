@@ -1,8 +1,9 @@
 import type { Component } from 'vue';
 
+type SectionKey = 'home' | 'about' | 'resume' | 'portfolio' | 'contact';
+
 export interface NavigationItem {
-  section: string;
-  labelKey: 'home' | 'about' | 'resume' | 'portfolio' | 'contact';
+  section: SectionKey;
   icon: Component;
 }
 
