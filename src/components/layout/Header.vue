@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
+import { personalData } from '@/data/personal';
 import { socials } from '@/data/socials';
 import { navigationItems } from '@/data/navigation';
 
@@ -19,13 +20,13 @@ const { t } = useI18n();
               class="aspect-square h-32 overflow-hidden rounded-full border-8 border-neutral-700"
             >
               <img
-                src="/src/assets/images/IMG_0956.JPEG"
-                alt=""
+                :src="personalData.portrait"
+                :alt="personalData.name"
                 class="h-full w-full object-cover"
               />
             </div>
 
-            <h2 class="text-center text-xl font-bold text-neutral-100">Jacobo Hernández Varela</h2>
+            <h2 class="text-center text-xl font-bold text-neutral-100">{{ personalData.name }}</h2>
 
             <div class="flex flex-row gap-1">
               <div

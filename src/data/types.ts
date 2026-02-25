@@ -21,3 +21,9 @@ export interface SocialLink {
   url: string;
   icon: string;
 }
+
+export interface PersonalData {
+  name: string;
+  portrait: string;
+  hero: string;
+}
