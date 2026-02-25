@@ -17,7 +17,7 @@ const { t } = useI18n();
         <div class="grow overflow-y-auto p-4">
           <section class="flex flex-col items-center gap-y-4">
             <div
-              class="aspect-square h-32 overflow-hidden rounded-full border-8 border-neutral-700"
+              class="aspect-square h-32 overflow-hidden rounded-full border-8 border-neutral-700 transition-colors duration-1000 dark:border-neutral-800"
             >
               <img
                 :src="personalData.portrait"
