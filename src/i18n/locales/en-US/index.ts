@@ -1,3 +1,5 @@
+import personal from './personal';
+
 export default {
   nav: {
     home: 'Home',
@@ -5,5 +7,9 @@ export default {
     resume: 'Resume',
     portfolio: 'Porfolio',
     contact: 'Contact'
+  },
+  personal,
+  hero: {
+    iam: "I'm a"
   }
 };
