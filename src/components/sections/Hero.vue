@@ -18,7 +18,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <div class="relative h-screen w-full" id="home">
+  <div id="home" class="relative h-screen w-full">
     <div class="absolute inset-0 aspect-video h-screen w-full overflow-hidden">
       <img :src="personalData.hero" :alt="personalData.name" class="h-full w-full object-cover" />
 
@@ -33,7 +33,7 @@ onMounted(() => {
       <div class="flex flex-row text-lg text-neutral-100">
         <p>{{ t('hero.iam') }}&nbsp;</p>
 
-        <p v-if="!isClient" class="">{{ texts[0] }}</p>
+        <p v-if="!isClient" class="border-b border-current">{{ texts[0] }}</p>
         <p v-else class="border-b border-current">{{ output }}</p>
 
         <span
