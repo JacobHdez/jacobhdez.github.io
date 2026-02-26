@@ -7,7 +7,7 @@ export const personalData: PersonalData = {
   mainRoleKey: 'role_00',
   roleKey: ['role_01', 'role_02', 'role_03', 'role_04'],
 
-  // shortDescriptionKey: 'shortDescription',
+  shortDescriptionKey: 'shortDescription',
   descriptionKey: 'description',
 
   about: {
