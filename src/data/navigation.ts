@@ -2,10 +2,10 @@ import type { NavigationItem } from './types';
 
 import {
   HomeIcon,
-  UserIcon,
-  DocumentTextIcon,
-  RectangleGroupIcon,
-  EnvelopeIcon
+  UserIcon
+  // DocumentTextIcon,
+  // RectangleGroupIcon,
+  // EnvelopeIcon
 } from '@heroicons/vue/24/solid';
 
 export const navigationItems: NavigationItem[] = [
