@@ -30,7 +30,7 @@ onMounted(() => {
         {{ personalData.name }}
       </h1>
 
-      <div class="flex flex-row text-lg text-neutral-100">
+      <div class="flex flex-row font-mono text-lg font-light text-neutral-100">
         <p>{{ t('hero.iam') }}&nbsp;</p>
 
         <p v-if="!isClient" class="border-b border-current">{{ texts[0] }}</p>
