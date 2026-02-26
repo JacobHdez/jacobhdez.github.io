@@ -27,5 +27,17 @@ export interface PersonalData {
   name: string;
   portrait: string;
   hero: string;
+  mainRoleKey: string;
   roleKey: string[];
+
+  shortDescriptionKey?: string;
+  descriptionKey: string;
+
+  about: {
+    city: string;
+    phone: string;
+    email: string;
+    birthday: string;
+    degree: string;
+  };
 }

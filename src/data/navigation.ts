@@ -10,8 +10,8 @@ import {
 
 export const navigationItems: NavigationItem[] = [
   { section: 'home', icon: HomeIcon },
-  { section: 'about', icon: UserIcon },
-  { section: 'resume', icon: DocumentTextIcon },
-  { section: 'portfolio', icon: RectangleGroupIcon },
-  { section: 'contact', icon: EnvelopeIcon }
+  { section: 'about', icon: UserIcon }
+  // { section: 'resume', icon: DocumentTextIcon },
+  // { section: 'portfolio', icon: RectangleGroupIcon },
+  // { section: 'contact', icon: EnvelopeIcon }
 ];

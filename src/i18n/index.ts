@@ -3,14 +3,18 @@ import { createI18n } from 'vue-i18n';
 import enUS from './locales/en-US';
 import esMX from './locales/es-MX';
 
-type MessageSchema = typeof enUS;
+import datetimeFormats from './datetimeFormats';
 
-export const i18n = createI18n<[MessageSchema], 'en-US' | 'es-MX'>({
+type MessageSchema = typeof enUS;
+type Locales = 'en-US' | 'es-MX';
+
+export const i18n = createI18n<[MessageSchema], Locales>({
   legacy: false,
   locale: 'en-US',
   fallbackLocale: 'en-US',
   messages: {
     'en-US': enUS,
     'es-MX': esMX
-  }
+  },
+  datetimeFormats: datetimeFormats
 });

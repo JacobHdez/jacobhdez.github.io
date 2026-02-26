@@ -11,5 +11,12 @@ export default {
   personal,
   hero: {
     iam: "I'm a"
+  },
+  about: {
+    city: 'City',
+    phone: 'Phone',
+    email: 'Email',
+    birthday: 'Birthday',
+    degree: 'Degree'
   }
 };
