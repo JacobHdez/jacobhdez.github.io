@@ -46,11 +46,11 @@ const { t } = useI18n();
               <li
                 v-for="(item, index) in navigationItems"
                 :key="index"
-                class="group relative flex flex-row items-center gap-2 px-2 py-1"
+                class="group relative flex flex-row items-center gap-2 px-2 py-1 transition-all duration-300 hover:translate-x-2"
               >
                 <component
                   :is="item.icon"
-                  class="h-5 w-5 transition-colors duration-300 group-hover:text-neutral-100"
+                  class="h-5 w-5 transition-colors duration-300 group-hover:text-gray-700"
                 />
                 <a
                   :href="`#${item.section}`"
