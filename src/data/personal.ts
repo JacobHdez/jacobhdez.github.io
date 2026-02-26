@@ -13,7 +13,7 @@ export const personalData: PersonalData = {
   about: {
     city: 'Guanajuato, México',
     phone: '+52 473 121 8706',
-    email: 'j.hernandezv@gmail.com',
+    email: 'jacobo.hdezv@gmail.com',
     birthday: 'Wed Jun 17 1998',
     degree: 'degree'
   }
