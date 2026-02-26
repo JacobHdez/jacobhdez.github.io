@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { useSafeT } from '@/composables/useSafeT';
 import { personalData } from '@/data/personal';
@@ -7,15 +8,19 @@ import { ChevronRightIcon } from '@heroicons/vue/24/solid';
 const { t, d } = useI18n();
 const { safeT } = useSafeT();
 
-const formatters: Record<string, (val: any) => string> = {
-  birthday: (val: string) => {
-    return d(new Date(val), 'short');
-  }
-};
-const useFormatter = (key: string, value: string) => {
-  const formatter = formatters[key];
-  return formatter ? formatter(value) : safeT(`personal.about.${value}`, value);
-};
+const formattedAbout = computed(() => {
+  return Object.entries(personalData.about).map(([key, value]) => {
+    let displayValue: string;
+
+    if (key === 'birthday') {
+      displayValue = d(new Date(value), 'short');
+    } else {
+      displayValue = safeT(`personal.about.${value}`, value);
+    }
+
+    return { key, label: t(`about.${key}`), value: displayValue };
+  });
+});
 </script>
 
 <template>
@@ -49,15 +54,12 @@ const useFormatter = (key: string, value: string) => {
 
       <ul class="mt-4 grid grid-cols-2 gap-x-8 gap-y-2">
         <li
-          v-for="(value, key) in personalData.about"
-          :key="key"
+          v-for="item in formattedAbout"
+          :key="item.key"
           class="flex flex-row items-center gap-x-1 font-light transition-all duration-1000 dark:font-extralight"
         >
-          <ChevronRightIcon
-            class="h-4 w-4 text-gray-900 transition-colors duration-1000 dark:text-gray-700"
-          />
-          <span class="font-semibold">{{ t(`about.${key}`) }}:</span>
-          {{ useFormatter(key, value) }}
+          <ChevronRightIcon class="h-4 w-4 text-gray-700" />
+          <span class="font-semibold">{{ item.label }}:</span>{{ item.value }}
         </li>
       </ul>
 
