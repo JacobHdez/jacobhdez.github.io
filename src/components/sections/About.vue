@@ -19,7 +19,7 @@ const useFormatter = (key: string, value: string) => {
 </script>
 
 <template>
-  <div id="about">
+  <div id="about" class="mx-auto max-w-7xl">
     <section class="px-4 py-8">
       <h2 class="">
         {{ t('nav.about') }}

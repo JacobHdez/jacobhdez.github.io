@@ -25,7 +25,9 @@ onMounted(() => {
       <div class="absolute inset-0 bg-black/30 transition-all duration-1000 dark:bg-black/60"></div>
     </div>
 
-    <section class="relative flex h-3/4 w-full flex-col items-start justify-center gap-y-4 pl-8">
+    <section
+      class="relative mx-auto flex h-3/4 max-w-7xl flex-col items-start justify-center gap-y-4 pl-8"
+    >
       <h1 class="text-6xl font-bold text-neutral-100">
         {{ personalData.name }}
       </h1>
