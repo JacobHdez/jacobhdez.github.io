@@ -51,7 +51,7 @@ const useFormatter = (key: string, value: string) => {
         <li
           v-for="(value, key) in personalData.about"
           :key="key"
-          class="flex flex-row items-center gap-x-1"
+          class="flex flex-row items-center gap-x-1 font-light transition-all duration-1000 dark:font-extralight"
         >
           <ChevronRightIcon
             class="h-4 w-4 text-gray-900 transition-colors duration-1000 dark:text-gray-700"
@@ -71,20 +71,3 @@ const useFormatter = (key: string, value: string) => {
     </section>
   </div>
 </template>
-
-<style scoped>
-@reference "@/assets/css/main.css";
-
-h2 {
-  @apply text-3xl font-semibold text-neutral-900 transition-colors duration-1000 dark:text-neutral-100;
-}
-h3 {
-  @apply text-2xl font-semibold text-neutral-900 transition-colors duration-1000 dark:text-neutral-100;
-}
-p {
-  @apply text-lg leading-relaxed font-light text-neutral-900 transition-all duration-1000 dark:font-extralight dark:text-neutral-100;
-}
-li {
-  @apply leading-relaxed font-light text-neutral-900 transition-all duration-1000 dark:font-extralight dark:text-neutral-100;
-}
-</style>

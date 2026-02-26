@@ -7,3 +7,13 @@
   --font-sans: 'Inter', sans-serif;
   --font-mono: 'Roboto', monospace;
 }
+
+.content h2 {
+  @apply text-3xl font-semibold;
+}
+.content h3 {
+  @apply text-2xl font-semibold;
+}
+.content p {
+  @apply text-lg leading-relaxed font-light text-pretty transition-all duration-1000 dark:font-extralight;
+}
