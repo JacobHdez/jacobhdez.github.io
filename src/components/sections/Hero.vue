@@ -26,26 +26,27 @@ onMounted(() => {
     </div>
 
     <section
-      class="relative mx-auto flex h-3/4 max-w-7xl flex-col items-start justify-center gap-y-4 pl-8"
+      class="relative mx-auto flex h-3/4 max-w-7xl flex-col items-start justify-center gap-y-4 px-8"
     >
-      <h1 class="text-6xl font-bold text-neutral-100">
+      <h1 class="text-4xl font-bold text-neutral-200 sm:text-6xl">
         {{ personalData.name }}
       </h1>
 
-      <div class="flex flex-row font-mono text-lg font-light text-neutral-100">
+      <div class="flex flex-row font-mono text-neutral-400">
         <p>{{ t('hero.iam') }}&nbsp;</p>
 
-        <p v-if="!isClient" class="border-b border-current">{{ texts[0] }}</p>
-        <p v-else class="border-b border-current">{{ output }}</p>
-
-        <span
-          :class="[
-            'border-r-2 border-current',
-            state === 'waiting' && 'animate-[blinkFade_1.2s_ease-in-out_infinite]',
-            state === 'typing' && 'opacity-100',
-            state === 'deleting' && 'opacity-70'
-          ]"
-        ></span>
+        <p v-if="!isClient" class="underline underline-offset-2">{{ texts[0] }}</p>
+        <p v-else class="underline underline-offset-2">
+          {{ output }}
+          <span
+            :class="[
+              'border-r-2 border-current',
+              state === 'waiting' && 'animate-[blinkFade_1.2s_ease-in-out_infinite]',
+              state === 'typing' && 'opacity-100',
+              state === 'deleting' && 'opacity-70'
+            ]"
+          ></span>
+        </p>
       </div>
     </section>
   </div>

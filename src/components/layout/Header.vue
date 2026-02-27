@@ -1,19 +1,27 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
 import { personalData } from '@/data/personal';
 import { socials } from '@/data/socials';
 import { navigationItems } from '@/data/navigation';
+import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid';
 
 import ThemeToggle from '../ui/ThemeToggle.vue';
 import LanguageToggle from '../ui/LanguageToggle.vue';
 
 const { t } = useI18n();
+const isOpen = ref(false);
 </script>
 
 <template>
-  <header class="relative w-2xs bg-neutral-900 transition-colors duration-1000 dark:bg-neutral-950">
+  <header
+    class="fixed z-10 w-full transform transition-all duration-1000 ease-in-out md:relative md:w-2xs md:translate-x-0"
+    :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
+  >
     <div class="absolute inset-0">
-      <div class="sticky top-0 bottom-0 left-0 flex h-screen flex-col">
+      <div
+        class="sticky top-0 bottom-0 left-0 flex h-screen flex-col bg-neutral-900 transition-colors duration-1000 dark:bg-neutral-950"
+      >
         <div class="grow overflow-y-auto p-4">
           <section class="flex flex-col items-center gap-y-4 text-neutral-100">
             <div
@@ -53,6 +61,7 @@ const { t } = useI18n();
                   class="h-5 w-5 transition-colors duration-300 group-hover:text-gray-700"
                 />
                 <a
+                  @click="isOpen = false"
                   :href="`#${item.section}`"
                   class="transition-colors duration-300 group-hover:text-neutral-100"
                 >
@@ -71,4 +80,12 @@ const { t } = useI18n();
       </div>
     </div>
   </header>
+
+  <button
+    @click="isOpen = !isOpen"
+    class="fixed top-4 right-4 z-20 h-12 w-12 rounded-lg bg-gray-700 p-2 text-neutral-100 md:hidden"
+  >
+    <XMarkIcon v-if="isOpen" />
+    <Bars3Icon v-else />
+  </button>
 </template>

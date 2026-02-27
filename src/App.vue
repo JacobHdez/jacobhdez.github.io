@@ -10,7 +10,7 @@ import Footer from './components/layout/Footer.vue';
   >
     <Header />
 
-    <div class="flex min-h-screen flex-1 flex-col">
+    <div class="z-0 flex min-h-screen flex-1 flex-col">
       <main
         class="content grow text-neutral-900 transition-colors duration-1000 dark:text-neutral-100"
       >

@@ -52,7 +52,7 @@ const formattedAbout = computed(() => {
         {{ t(`personal.roles.${personalData.mainRoleKey}`) }}
       </h3>
 
-      <ul class="mt-4 grid grid-cols-2 gap-x-8 gap-y-2">
+      <ul class="mt-4 grid grid-cols-1 gap-x-8 gap-y-2 lg:grid-cols-2">
         <li
           v-for="item in formattedAbout"
           :key="item.key"
