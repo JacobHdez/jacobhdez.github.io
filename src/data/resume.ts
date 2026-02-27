@@ -41,8 +41,8 @@ export const resumeData: ResumeData = {
           organization: 'Comisión Federal de Electricidad',
           location: 'Guanajuato, Gto. México',
           dates: {
-            start: 'Mon Aug 15 2016',
-            end: 'Fri Jan 2022',
+            start: 'Mon Sep 06 2021',
+            end: 'Fri Feb 18 2022',
             endStatus: 'date'
           },
           descriptionKeys: ['cfe.description_01', 'cfe.description_02', 'cfe.description_03']
