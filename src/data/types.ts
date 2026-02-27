@@ -1,6 +1,6 @@
 import type { Component } from 'vue';
 
-type SectionKey = 'home' | 'about' | 'resume' | 'portfolio' | 'contact';
+type SectionKey = 'home' | 'about' | 'skills' | 'resume' | 'portfolio' | 'contact';
 
 export interface NavigationItem {
   section: SectionKey;
