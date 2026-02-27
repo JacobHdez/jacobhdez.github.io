@@ -26,7 +26,7 @@ const formattedAbout = computed(() => {
 <template>
   <div id="about" class="mx-auto max-w-7xl">
     <section class="px-4 py-8">
-      <h2 class="">
+      <h2>
         {{ t('nav.about') }}
       </h2>
       <div class="mt-2 w-16 border-t-4 border-gray-700"></div>

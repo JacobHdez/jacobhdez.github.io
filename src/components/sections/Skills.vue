@@ -22,7 +22,7 @@ const preSkills = computed(() => {
 <template>
   <div id="skills" class="bg-neutral-200 transition-colors duration-1000 dark:bg-neutral-800">
     <section class="mx-auto max-w-7xl px-4 py-8">
-      <h2 class="">
+      <h2>
         {{ t('nav.skills') }}
       </h2>
       <div class="mt-2 w-16 border-t-4 border-gray-700"></div>
