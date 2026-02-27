@@ -4,6 +4,7 @@ export default {
   nav: {
     home: 'Inicio',
     about: 'Sobre Mi',
+    skills: 'Habilidades',
     resume: 'Curriculum',
     portfolio: 'Portafolio',
     contact: 'Contacto'
@@ -18,5 +19,8 @@ export default {
     email: 'Email',
     birthday: 'Cumpleaños',
     degree: 'Título'
+  },
+  skills: {
+    year: '< 1 año | {count} año | {count} años'
   }
 };

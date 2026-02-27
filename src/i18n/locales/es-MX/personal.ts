@@ -12,5 +12,6 @@ export default {
     'Soy un Ingeniero de Software y Datos con una pasión por transformar ideas complejas en soluciones simples y de alto impacto. Mi formación combina el pensamiento lógico con una visión humana, permitiéndome abordar desafíos técnicos con análisis crítico y empatía.\nActualmente, me enfoco en construir sistemas de alto rendimiento y experiencias inmersivas usando Unreal Engine 5, C++ y Python. Desde el procesamiento de datos en tiempo real hasta mundos de juego interactivos, busco entender el funcionamiento interno de las cosas para entregar resultados meticulosos y eficientes.',
   about: {
     degree: 'Licenciatura'
-  }
+  },
+  skillsDescription: ''
 };

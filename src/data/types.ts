@@ -23,6 +23,12 @@ export interface SocialLink {
   icon: string;
 }
 
+export interface Skill {
+  name: string;
+  datetime: string;
+  level: string;
+}
+
 export interface PersonalData {
   name: string;
   portrait: string;
@@ -32,7 +38,6 @@ export interface PersonalData {
 
   shortDescriptionKey?: string;
   descriptionKey: string;
-
   about: {
     city: string;
     phone: string;
@@ -40,4 +45,7 @@ export interface PersonalData {
     birthday: string;
     degree: string;
   };
+
+  skills: Skill[];
+  skillsDescriptionKey?: string;
 }
