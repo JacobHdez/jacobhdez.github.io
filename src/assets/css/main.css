@@ -15,5 +15,5 @@
   @apply text-2xl font-semibold;
 }
 .content p {
-  @apply text-lg leading-relaxed font-light text-pretty transition-all duration-1000 dark:font-extralight;
+  @apply text-justify text-lg leading-relaxed font-light text-pretty transition-all duration-1000 dark:font-extralight;
 }
