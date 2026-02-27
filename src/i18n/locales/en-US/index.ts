@@ -1,4 +1,4 @@
-import personal from './personal';
+import data from './data';
 
 export default {
   nav: {
@@ -9,10 +9,13 @@ export default {
     portfolio: 'Porfolio',
     contact: 'Contact'
   },
-  personal,
-  hero: {
+
+  data,
+
+  home: {
     iam: "I'm a"
   },
+
   about: {
     city: 'City',
     phone: 'Phone',
@@ -20,6 +23,7 @@ export default {
     birthday: 'Birthday',
     degree: 'Degree'
   },
+
   skills: {
     year: '< 1 year | {count} year | {count} years'
   }

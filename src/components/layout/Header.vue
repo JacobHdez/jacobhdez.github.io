@@ -1,8 +1,8 @@
 <script setup lang="ts">
 import { ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { personalData } from '@/data/personal';
-import { socials } from '@/data/socials';
+import { aboutData } from '@/data/about';
+import { socialItems } from '@/data/socials';
 import { navigationItems } from '@/data/navigation';
 import { Bars3Icon, XMarkIcon } from '@heroicons/vue/24/solid';
 
@@ -28,17 +28,17 @@ const isOpen = ref(false);
               class="aspect-square h-32 overflow-hidden rounded-full border-8 border-neutral-700 transition-colors duration-1000 dark:border-neutral-800"
             >
               <img
-                :src="personalData.portrait"
-                :alt="personalData.name"
+                :src="aboutData.portrait"
+                :alt="aboutData.name"
                 class="h-full w-full object-cover"
               />
             </div>
 
-            <h2 class="text-center text-xl font-bold">{{ personalData.name }}</h2>
+            <h2 class="text-center text-xl font-bold">{{ aboutData.name }}</h2>
 
             <div class="flex flex-row gap-1">
               <div
-                v-for="(social, index) in socials"
+                v-for="(social, index) in socialItems"
                 :key="index"
                 class="flex h-10 w-10 items-center justify-center rounded-full bg-neutral-800 transition-colors duration-300 hover:bg-neutral-700 dark:bg-neutral-900 dark:hover:bg-neutral-800"
               >

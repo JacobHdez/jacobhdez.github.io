@@ -7,7 +7,7 @@ export interface NavigationItem {
   icon: Component;
 }
 
-export interface SocialLink {
+export interface SocialItem {
   platform:
     | 'linkedin'
     | 'github'
@@ -23,13 +23,7 @@ export interface SocialLink {
   icon: string;
 }
 
-export interface Skill {
-  name: string;
-  datetime: string;
-  level: string;
-}
-
-export interface PersonalData {
+export interface AboutData {
   name: string;
   portrait: string;
   hero: string;
@@ -45,7 +39,15 @@ export interface PersonalData {
     birthday: string;
     degree: string;
   };
+}
 
+interface Skill {
+  name: string;
+  datetime: string;
+  level: string;
+}
+
+export interface SkillsData {
+  description?: string;
   skills: Skill[];
-  skillsDescriptionKey?: string;
 }

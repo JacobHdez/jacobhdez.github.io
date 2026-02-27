@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { personalData } from '@/data/personal';
+import { skillsData } from '@/data/skills';
 
 const { t } = useI18n();
 
@@ -12,7 +12,7 @@ const getYears = (dateString: string) => {
 };
 
 const preSkills = computed(() => {
-  return personalData.skills.map((skill) => ({
+  return skillsData.skills.map((skill) => ({
     ...skill,
     years: getYears(skill.datetime)
   }));
@@ -27,15 +27,15 @@ const preSkills = computed(() => {
       </h2>
       <div class="mt-2 w-16 border-t-4 border-gray-700"></div>
 
-      <p v-if="personalData.skillsDescriptionKey" class="mt-4">
-        {{ t(`personal.${personalData.skillsDescriptionKey}`) }}
+      <p v-if="skillsData.description" class="mt-4">
+        {{ t(`data.skills.${skillsData.description}`) }}
       </p>
 
-      <div class="mt-8 grid grid-cols-1 gap-x-16 gap-y-4 md:grid-cols-2 xl:grid-cols-3">
-        <div v-for="(skill, index) in preSkills" :key="index" class="group">
-          <div class="flex flex-row justify-between">
+      <div class="mt-8 grid grid-cols-1 gap-x-16 gap-y-1 md:grid-cols-2 xl:grid-cols-3">
+        <div v-for="(skill, index) in preSkills" :key="index" class="group py-2">
+          <div class="flex flex-row justify-between text-sm">
             <span>{{ skill.name }}</span>
-            <span>{{ t('skills.year', { count: skill.years }) }}</span>
+            <span class="font-light">{{ t('skills.year', { count: skill.years }) }}</span>
           </div>
 
           <div class="relative mt-1 w-full">

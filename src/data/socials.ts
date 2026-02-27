@@ -1,6 +1,6 @@
-import type { SocialLink } from './types';
+import type { SocialItem } from './types';
 
-export const socials: SocialLink[] = [
+export const socialItems: SocialItem[] = [
   {
     platform: 'linkedin',
     url: 'https://www.linkedin.com/in/jacobohdezv/',
