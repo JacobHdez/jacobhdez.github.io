@@ -26,5 +26,13 @@ export default {
 
   skills: {
     year: '< 1 año | {count} año | {count} años'
+  },
+
+  resume: {
+    education: 'Formación Académica',
+    experience: 'Experiencia Laboral',
+    extracurricular: 'Actividad extracurricular',
+    today: 'Actualidad',
+    aborted: 'Trunca'
   }
 };

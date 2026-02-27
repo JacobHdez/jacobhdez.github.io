@@ -1,5 +1,9 @@
 export default {
   'en-US': {
+    small: {
+      year: 'numeric',
+      month: 'short'
+    },
     short: {
       year: 'numeric',
       month: 'short',
@@ -15,6 +19,10 @@ export default {
     }
   },
   'es-MX': {
+    small: {
+      year: 'numeric',
+      month: 'short'
+    },
     short: {
       year: 'numeric',
       month: 'short',
