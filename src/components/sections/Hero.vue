@@ -1,12 +1,12 @@
 <script setup lang="ts">
 import { computed, onMounted, ref } from 'vue';
 import { useI18n } from 'vue-i18n';
-import { personalData } from '@/data/personal';
+import { aboutData } from '@/data/about';
 import { useTypewriterLoop } from '@/composables/useTypewriter';
 
 const { t } = useI18n();
 
-const texts = computed(() => personalData.roleKey.map((key) => t(`personal.roles.${key}`)));
+const texts = computed(() => aboutData.roleKey.map((key) => t(`data.home.roles.${key}`)));
 
 const isClient = ref(false);
 const { output, state, start } = useTypewriterLoop(texts, 128, 64, 4096);
@@ -20,30 +20,33 @@ onMounted(() => {
 <template>
   <div id="home" class="relative h-screen w-full">
     <div class="absolute inset-0 aspect-video h-screen w-full overflow-hidden">
-      <img :src="personalData.hero" :alt="personalData.name" class="h-full w-full object-cover" />
+      <img :src="aboutData.hero" :alt="aboutData.name" class="h-full w-full object-cover" />
 
       <div class="absolute inset-0 bg-black/30 transition-all duration-1000 dark:bg-black/60"></div>
     </div>
 
-    <section class="relative flex h-3/4 w-full flex-col items-start justify-center gap-y-4 pl-8">
-      <h1 class="text-6xl font-bold text-neutral-100">
-        {{ personalData.name }}
+    <section
+      class="relative mx-auto flex h-3/4 max-w-7xl flex-col items-start justify-center gap-y-4 px-8"
+    >
+      <h1 class="text-4xl font-bold text-neutral-200 sm:text-6xl">
+        {{ aboutData.name }}
       </h1>
 
-      <div class="flex flex-row font-mono text-lg font-light text-neutral-100">
-        <p>{{ t('hero.iam') }}&nbsp;</p>
+      <div class="flex flex-row font-mono text-neutral-400">
+        <p>{{ t('home.iam') }}&nbsp;</p>
 
-        <p v-if="!isClient" class="border-b border-current">{{ texts[0] }}</p>
-        <p v-else class="border-b border-current">{{ output }}</p>
-
-        <span
-          :class="[
-            'border-r-2 border-current',
-            state === 'waiting' && 'animate-[blinkFade_1.2s_ease-in-out_infinite]',
-            state === 'typing' && 'opacity-100',
-            state === 'deleting' && 'opacity-70'
-          ]"
-        ></span>
+        <p v-if="!isClient" class="underline underline-offset-2">{{ texts[0] }}</p>
+        <p v-else class="underline underline-offset-2">
+          {{ output }}
+          <span
+            :class="[
+              'border-r-2 border-current',
+              state === 'waiting' && 'animate-[blinkFade_1.2s_ease-in-out_infinite]',
+              state === 'typing' && 'opacity-100',
+              state === 'deleting' && 'opacity-70'
+            ]"
+          ></span>
+        </p>
       </div>
     </section>
   </div>
