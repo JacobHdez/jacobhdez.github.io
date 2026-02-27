@@ -29,7 +29,7 @@ const { t } = useI18n();
       <ResumeSection
         v-if="resumeData.sections[1]"
         :section="resumeData.sections[1]"
-        class="xl:col-start-2 xl:row-span-3 xl:row-start-1"
+        class="xl:col-start-2 xl:row-span-2 xl:row-start-1"
       />
       <ResumeSection
         v-if="resumeData.sections[2]"
