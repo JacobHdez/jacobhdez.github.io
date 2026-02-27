@@ -1,7 +1,7 @@
 import type { SkillsData } from './types/SkillsData';
 
 export const skillsData: SkillsData = {
-  // description: 'description',
+  // descriptionKey: 'description',
   skills: [
     { name: 'C/C++', datetime: 'Mon Aug 01 2016', level: '95%' },
     { name: 'Python', datetime: 'Tue Aug 01 2017', level: '90%' },

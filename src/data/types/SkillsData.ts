@@ -5,6 +5,6 @@ interface Skill {
 }
 
 export interface SkillsData {
-  description?: string;
+  descriptionKey?: string;
   skills: Skill[];
 }

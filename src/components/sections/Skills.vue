@@ -27,8 +27,8 @@ const preSkills = computed(() => {
       </h2>
       <div class="mt-2 w-16 border-t-4 border-gray-700"></div>
 
-      <p v-if="skillsData.description" class="mt-4">
-        {{ t(`data.skills.${skillsData.description}`) }}
+      <p v-if="skillsData.descriptionKey" class="mt-4">
+        {{ t(`data.skills.${skillsData.descriptionKey}`) }}
       </p>
 
       <div class="mt-8 grid grid-cols-1 gap-x-16 gap-y-1 md:grid-cols-2 xl:grid-cols-3">
