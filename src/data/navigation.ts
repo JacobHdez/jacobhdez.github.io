@@ -1,4 +1,4 @@
-import type { NavigationItem } from './types';
+import type { NavigationItem } from './types/NavigationItem';
 
 import {
   HomeIcon,

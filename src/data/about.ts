@@ -1,4 +1,4 @@
-import type { AboutData } from './types';
+import type { AboutData } from './types/AboutData';
 
 export const aboutData: AboutData = {
   name: 'Jacobo Hernández Varela',

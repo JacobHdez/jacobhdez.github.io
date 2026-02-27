@@ -1,4 +1,4 @@
-import type { SkillsData } from './types';
+import type { SkillsData } from './types/SkillsData';
 
 export const skillsData: SkillsData = {
   // description: 'description',
