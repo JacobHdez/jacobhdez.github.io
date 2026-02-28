@@ -32,7 +32,6 @@ export default {
     education: 'Formación Académica',
     experience: 'Experiencia Laboral',
     extracurricular: 'Actividad extracurricular',
-    today: 'Actualidad',
-    aborted: 'Trunca'
+    present: 'Actualidad'
   }
 };
