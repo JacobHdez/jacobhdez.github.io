@@ -1,5 +1,5 @@
 type SectionKey = 'education' | 'experience' | 'extracurricular';
-type EndStatus = 'date' | 'today' | 'aborted';
+type EndStatus = 'date' | 'present';
 
 export interface Entry {
   titleKey: string;

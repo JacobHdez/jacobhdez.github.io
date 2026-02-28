@@ -15,11 +15,8 @@ const formatEndDate = (entry: Entry) => {
     case 'date':
       return end ? d(new Date(end), 'small') : '';
 
-    case 'aborted':
-      return t('resume.aborted');
-
-    case 'today':
-      return t('resume.today');
+    case 'present':
+      return t('resume.present');
 
     default:
       return '';

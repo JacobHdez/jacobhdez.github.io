@@ -32,7 +32,6 @@ export default {
     education: 'Academic Background',
     experience: 'Work Experience',
     extracurricular: 'Extracurricular Activity',
-    today: 'Today',
-    aborted: 'Aborted'
+    present: 'Present'
   }
 };

@@ -14,7 +14,7 @@ export const resumeData: ResumeData = {
           dates: {
             start: 'Mon Jan 23 2023',
             end: 'Fri Jun 12 2026',
-            endStatus: 'today'
+            endStatus: 'present'
           },
           descriptionKeys: ['lidia.description_01']
         },
@@ -26,7 +26,7 @@ export const resumeData: ResumeData = {
           dates: {
             start: 'Mon Aug 15 2016',
             end: 'Fri Jun 10 2022',
-            endStatus: 'aborted'
+            endStatus: 'date'
           },
           descriptionKeys: ['demat.description_01']
         }
