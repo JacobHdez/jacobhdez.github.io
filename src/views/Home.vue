@@ -2,7 +2,7 @@
 import Hero from '@/components/sections/Hero.vue';
 import About from '@/components/sections/About.vue';
 import Skills from '@/components/sections/Skills.vue';
-import ResumeView from '@/components/sections/Resume/ResumeView.vue';
+import Resume from '@/components/sections/Resume/Resume.vue';
 import Contact from '@/components/sections/Contact/Contact.vue';
 </script>
 
@@ -10,6 +10,6 @@ import Contact from '@/components/sections/Contact/Contact.vue';
   <Hero />
   <About />
   <Skills />
-  <ResumeView />
+  <Resume />
   <Contact />
 </template>
