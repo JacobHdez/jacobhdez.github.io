@@ -33,5 +33,18 @@ export default {
     experience: 'Work Experience',
     extracurricular: 'Extracurricular Activity',
     present: 'Present'
+  },
+
+  contact: {
+    form: {
+      name: 'Name',
+      email: 'Email',
+      subject: 'Subject',
+      message: 'Message',
+      send: 'Submit',
+      loading: 'Sending',
+      error: 'Something went wrong. Try again.',
+      sent: 'Message sent successfully.'
+    }
   }
 };

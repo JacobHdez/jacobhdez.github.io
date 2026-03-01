@@ -33,5 +33,18 @@ export default {
     experience: 'Experiencia Laboral',
     extracurricular: 'Actividad extracurricular',
     present: 'Actualidad'
+  },
+
+  contact: {
+    form: {
+      name: 'Nombre',
+      email: 'Correo Electrónico',
+      subject: 'Asunto',
+      message: 'Mensaje',
+      send: 'Enviar',
+      loading: 'Enviando',
+      error: 'Algo salió mal. Inténtalo de nuevo.',
+      sent: 'Mensaje enviado correctamente.'
+    }
   }
 };

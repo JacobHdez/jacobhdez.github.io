@@ -64,5 +64,9 @@ export default {
       description_01:
         'Capacitación para el manejo de herramientas de análisis de datos orientados a la industria y ciencia.'
     }
+  },
+
+  contact: {
+    description: ''
   }
 };

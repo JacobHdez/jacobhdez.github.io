@@ -61,5 +61,9 @@ export default {
       title: 'Data Science School: Benefits to Industry and Business from Data Analytics',
       description_01: 'Training in the use of data analysis tools oriented to industry and science.'
     }
+  },
+
+  contact: {
+    description: ''
   }
 };
