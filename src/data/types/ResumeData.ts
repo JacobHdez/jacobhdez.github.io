@@ -1,7 +1,8 @@
-type SectionKey = 'education' | 'experience' | 'extracurricular';
+export type SectionType = 'education' | 'experience' | 'extracurricular';
 type EndStatus = 'date' | 'present';
 
 export interface Entry {
+  i18n_route: string;
   titleKey: string;
   organization: string;
   location: string;
@@ -14,7 +15,7 @@ export interface Entry {
 }
 
 export interface Section {
-  titleKey: SectionKey;
+  titleKey: SectionType;
   entries: Entry[];
 }
 

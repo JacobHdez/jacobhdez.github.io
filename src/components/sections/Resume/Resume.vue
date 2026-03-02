@@ -24,16 +24,19 @@ const { t } = useI18n();
       <ResumeSection
         v-if="resumeData.sections[0]"
         :section="resumeData.sections[0]"
+        :section_type="resumeData.sections[0].titleKey"
         class="xl:col-start-1 xl:row-start-1"
       />
       <ResumeSection
         v-if="resumeData.sections[1]"
         :section="resumeData.sections[1]"
+        :section_type="resumeData.sections[1].titleKey"
         class="xl:col-start-2 xl:row-span-2 xl:row-start-1"
       />
       <ResumeSection
         v-if="resumeData.sections[2]"
         :section="resumeData.sections[2]"
+        :section_type="resumeData.sections[2].titleKey"
         class="xl:col-start-1 xl:row-start-2"
       />
     </div>
