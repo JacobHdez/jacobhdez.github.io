@@ -2,7 +2,7 @@
 import { useI18n } from 'vue-i18n';
 import type { Section, Entry } from '@/data/types/ResumeData';
 
-defineProps<{
+const props = defineProps<{
   section: Section;
 }>();
 
@@ -26,10 +26,10 @@ const formatEndDate = (entry: Entry) => {
 
 <template>
   <section>
-    <h3>{{ t(`resume.${section.titleKey}`) }}</h3>
+    <h3>{{ t(`resume.${props.section.titleKey}`) }}</h3>
 
     <div class="mt-2 space-y-8 border-l-2 border-gray-700 pl-4">
-      <div v-for="(entry, index) in section.entries" :key="index" class="relative">
+      <div v-for="(entry, index) in props.section.entries" :key="index" class="relative">
         <span
           class="absolute top-0 -left-6.25 h-4 w-4 rounded-full border-2 border-gray-700 bg-neutral-100 transition-colors duration-1000 dark:bg-neutral-900"
         ></span>
