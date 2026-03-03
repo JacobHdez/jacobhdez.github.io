@@ -12,9 +12,13 @@ export const aboutData: AboutData = {
 
   about: {
     city: 'Guanajuato, México',
-    phone: '+52 473 121 8706',
-    email: 'jacobo.hdezv@gmail.com',
     birthday: 'Wed Jun 17 1998',
     degree: 'degree'
+  },
+
+  available: {
+    status: true,
+    yesKey: 'available_y',
+    noKey: 'available_n'
   }
 };

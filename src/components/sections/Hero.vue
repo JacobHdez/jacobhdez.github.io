@@ -25,14 +25,12 @@ onMounted(() => {
       <div class="absolute inset-0 bg-black/30 transition-all duration-1000 dark:bg-black/60"></div>
     </div>
 
-    <section
-      class="relative mx-auto flex h-3/4 max-w-7xl flex-col items-start justify-center gap-y-4 px-8"
-    >
+    <section class="relative mx-auto flex h-3/4 max-w-7xl flex-col items-start justify-center gap-y-4 px-8">
       <h1 class="text-4xl font-bold text-neutral-200 sm:text-6xl">
         {{ aboutData.name }}
       </h1>
 
-      <div class="flex flex-row font-mono text-neutral-400">
+      <div class="flex flex-row font-mono text-lg text-neutral-400 sm:text-xl">
         <p>{{ t('home.iam') }}&nbsp;</p>
 
         <p v-if="!isClient" class="underline underline-offset-2">{{ texts[0] }}</p>
