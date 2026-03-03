@@ -39,9 +39,7 @@ const formattedAbout = computed(() => {
     <section class="mx-auto mt-8 flex max-w-2xl flex-col items-center">
       <div class="relative aspect-square h-64 w-64 overflow-hidden">
         <img :src="aboutData.portrait" :alt="aboutData.name" class="h-full w-full object-cover" />
-        <div
-          class="absolute inset-0 bg-black/30 transition-all duration-1000 dark:bg-black/60"
-        ></div>
+        <div class="absolute inset-0 bg-black/30 transition-all duration-1000 dark:bg-black/60"></div>
       </div>
 
       <h3 class="mt-4">
@@ -58,12 +56,19 @@ const formattedAbout = computed(() => {
           <span class="font-semibold">{{ item.label }}:</span>{{ item.value }}
         </li>
       </ul>
+      <div class="relative mt-4 font-light transition-all duration-1000 dark:font-extralight">
+        <div v-if="aboutData.available.status" class="absolute top-0 -left-2.5 inline-flex size-2">
+          <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-700 opacity-75"></span>
+          <span class="relative inline-flex h-full w-full rounded-full bg-gray-700"></span>
+        </div>
 
-      <p
-        class="mt-8"
-        v-for="(text, index) in t(`data.about.${aboutData.descriptionKey}`).split('\n')"
-        :key="index"
-      >
+        <a v-if="aboutData.available.status" href="#contact" class="hover:underline">
+          {{ t(`data.about.${aboutData.available.yesKey}`) }}
+        </a>
+        <span v-else>{{ t(`data.about.${aboutData.available.noKey}`) }}</span>
+      </div>
+
+      <p class="mt-8" v-for="(text, index) in t(`data.about.${aboutData.descriptionKey}`).split('\n')" :key="index">
         {{ text }}
       </p>
     </section>

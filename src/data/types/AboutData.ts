@@ -9,9 +9,14 @@ export interface AboutData {
   descriptionKey: string;
   about: {
     city: string;
-    phone: string;
-    email: string;
+    phone?: string;
+    email?: string;
     birthday: string;
     degree: string;
+  };
+  available: {
+    status: boolean;
+    yesKey: string;
+    noKey: string;
   };
 }
