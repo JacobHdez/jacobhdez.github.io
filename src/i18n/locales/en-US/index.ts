@@ -35,6 +35,12 @@ export default {
     present: 'Present'
   },
 
+  portfolio: {
+    empty: 'No projects available.',
+    web: 'Website',
+    code: 'Code'
+  },
+
   contact: {
     form: {
       name: 'Name',

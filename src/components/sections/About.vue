@@ -13,7 +13,7 @@ const formattedAbout = computed(() => {
     let displayValue: string;
 
     if (key === 'birthday') {
-      displayValue = d(new Date(value), 'short');
+      displayValue = d(new Date(value), 'short_dm');
     } else {
       displayValue = safeT(`data.about.${value}`, value);
     }
@@ -31,7 +31,7 @@ const formattedAbout = computed(() => {
       </h2>
       <div class="mt-2 w-16 border-t-4 border-gray-700"></div>
 
-      <p class="mt-4" v-if="aboutData.shortDescriptionKey">
+      <p class="mt-4 text-lg" v-if="aboutData.shortDescriptionKey">
         {{ t(`data.about.${aboutData.shortDescriptionKey}`) }}
       </p>
     </section>
@@ -68,7 +68,7 @@ const formattedAbout = computed(() => {
         <span v-else>{{ t(`data.about.${aboutData.available.noKey}`) }}</span>
       </div>
 
-      <p class="mt-8" v-for="(text, index) in t(`data.about.${aboutData.descriptionKey}`).split('\n')" :key="index">
+      <p class="mt-8 text-lg" v-for="(text, index) in t(`data.about.${aboutData.descriptionKey}`).split('\n')" :key="index">
         {{ text }}
       </p>
     </section>

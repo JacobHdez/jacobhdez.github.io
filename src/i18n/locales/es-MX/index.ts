@@ -35,6 +35,12 @@ export default {
     present: 'Actualidad'
   },
 
+  portfolio: {
+    empty: 'No hay proyectos disponibles.',
+    web: 'Sitio Web',
+    code: 'Código'
+  },
+
   contact: {
     form: {
       name: 'Nombre',

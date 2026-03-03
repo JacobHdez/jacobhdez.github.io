@@ -15,7 +15,7 @@ const { t } = useI18n();
       </h2>
       <div class="mt-2 w-16 border-t-4 border-gray-700"></div>
 
-      <p v-if="resumeData.descriptionKey" class="mt-4">
+      <p v-if="resumeData.descriptionKey" class="mt-4 text-lg">
         {{ t(`data.resume.${resumeData.descriptionKey}`) }}
       </p>
     </section>

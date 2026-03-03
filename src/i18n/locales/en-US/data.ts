@@ -14,7 +14,9 @@ export default {
       'Full-Stack developer specialized in C++, Unreal Engine 5, and modern web architectures. Turning complex logic into seamless experiences.',
     description:
       'I am a Software and Data Engineer with a passion for transforming complex ideas into simple, high-impact solutions. My background combines logical thinking with a human perspective, allowing me to approach technical challenges with both critical analysis and empathy.\nCurrently, I focus on building high-performance systems and immersive experiences using Unreal Engine 5, C++, and Python. From real-time data processing to interactive game worlds, I strive to understand how things work at their core to deliver meticulous and efficient results.',
-    degree: 'Bachelor'
+    degree: 'Bachelor',
+    available_y: 'Currently available to collaborate.',
+    available_n: 'Currently not available for collaboration.'
   },
 
   skills: {
@@ -27,8 +29,7 @@ export default {
     education: {
       demat: {
         degree: 'Computer Science',
-        description_01:
-          'Solving real problems using computational tools and relying on mathematical modeling methods.'
+        description_01: 'Solving real problems using computational tools and relying on mathematical modeling methods.'
       },
       lidia: {
         degree: 'Data Engineer and Artificial Intelligence',
@@ -48,8 +49,7 @@ export default {
       mixtemi: {
         position: 'Front-End Developer',
         description_01: "Maintenance and updating of the organization's home page.",
-        description_02:
-          'Deployment and real time update of a menu for a Mexican fast food business.'
+        description_02: 'Deployment and real time update of a menu for a Mexican fast food business.'
       },
       cfe: {
         position: 'Software Engineer',
@@ -65,8 +65,33 @@ export default {
     extracurricular: {
       unam_dts: {
         title: 'Data Science School: Benefits to Industry and Business from Data Analytics',
-        description_01:
-          'Training in the use of data analysis tools oriented to industry and science.'
+        description_01: 'Training in the use of data analysis tools oriented to industry and science.'
+      }
+    }
+  },
+
+  portfolio: {
+    description: '',
+
+    projects: {
+      programming: {
+        hs_blog: {
+          title: "Hollow Sense's Development Log",
+          description:
+            'A technical documentation platform and dev-log focused on tracking progress, architecture decisions, and milestones.'
+        },
+        hs_web: {
+          title: "Hollow Sense's Website",
+          description: 'Updating the Hollow Sense website to new modern technologies, maintaining the same style.'
+        }
+      },
+
+      games: {
+        hs_lockdown: {
+          title: 'Hollow Stories: Lockdown',
+          description:
+            'A neo-retro noir horror narrative game where you explore, solve puzzles, and survive by fighting enemies in a city controlled by corruption and cults.'
+        }
       }
     }
   },

@@ -6,8 +6,7 @@ import { skillsData } from '@/data/skills';
 const { t } = useI18n();
 
 const getYears = (dateString: string) => {
-  const years =
-    (new Date().getTime() - new Date(dateString).getTime()) / (1000 * 60 * 60 * 24 * 365.25);
+  const years = (new Date().getTime() - new Date(dateString).getTime()) / (1000 * 60 * 60 * 24 * 365.25);
   return Math.floor(years);
 };
 
@@ -27,7 +26,7 @@ const preSkills = computed(() => {
       </h2>
       <div class="mt-2 w-16 border-t-4 border-gray-700"></div>
 
-      <p v-if="skillsData.descriptionKey" class="mt-4">
+      <p v-if="skillsData.descriptionKey" class="mt-4 text-lg">
         {{ t(`data.skills.${skillsData.descriptionKey}`) }}
       </p>
 
@@ -39,9 +38,7 @@ const preSkills = computed(() => {
           </div>
 
           <div class="relative mt-1 w-full">
-            <div
-              class="h-2 w-full border border-neutral-900/30 transition-colors duration-1000 dark:border-neutral-100/30"
-            >
+            <div class="h-2 w-full border border-neutral-900/30 transition-colors duration-1000 dark:border-neutral-100/30">
               <div class="h-full bg-gray-700" :style="{ width: skill.level }"></div>
             </div>
 
