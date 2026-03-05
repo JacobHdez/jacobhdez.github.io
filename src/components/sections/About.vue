@@ -39,7 +39,7 @@ const formattedAbout = computed(() => {
     <section class="mx-auto mt-8 flex max-w-2xl flex-col items-center">
       <div class="relative aspect-square h-64 w-64 overflow-hidden">
         <img :src="aboutData.portrait" :alt="aboutData.name" class="h-full w-full object-cover" />
-        <div class="absolute inset-0 bg-black/30 transition-all duration-1000 dark:bg-black/60"></div>
+        <div class="absolute inset-0 bg-black/30 dark:bg-black/60"></div>
       </div>
 
       <h3 class="mt-4">
@@ -50,13 +50,13 @@ const formattedAbout = computed(() => {
         <li
           v-for="item in formattedAbout"
           :key="item.key"
-          class="flex flex-row items-center gap-x-1 font-light transition-all duration-1000 dark:font-extralight"
+          class="flex flex-row items-center gap-x-1 font-light dark:font-extralight"
         >
           <ChevronRightIcon class="h-4 w-4 text-gray-700" />
           <span class="font-semibold">{{ item.label }}:</span>{{ item.value }}
         </li>
       </ul>
-      <div class="relative mt-4 font-light transition-all duration-1000 dark:font-extralight">
+      <div class="relative mt-4 font-light dark:font-extralight">
         <div v-if="aboutData.available.status" class="absolute top-0 -left-2.5 inline-flex size-2">
           <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-gray-700 opacity-75"></span>
           <span class="relative inline-flex h-full w-full rounded-full bg-gray-700"></span>

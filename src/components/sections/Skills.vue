@@ -19,7 +19,7 @@ const preSkills = computed(() => {
 </script>
 
 <template>
-  <div id="skills" class="bg-neutral-200 transition-colors duration-1000 dark:bg-neutral-800">
+  <div id="skills" class="bg-neutral-200 dark:bg-neutral-800">
     <section class="mx-auto max-w-7xl px-4 py-8">
       <h2>
         {{ t('nav.skills') }}
@@ -38,12 +38,12 @@ const preSkills = computed(() => {
           </div>
 
           <div class="relative mt-1 w-full">
-            <div class="h-2 w-full border border-neutral-900/30 transition-colors duration-1000 dark:border-neutral-100/30">
+            <div class="h-2 w-full border border-neutral-900/30 dark:border-neutral-100/30">
               <div class="h-full bg-gray-700" :style="{ width: skill.level }"></div>
             </div>
 
             <div
-              class="pointer-events-none absolute -top-1 left-1/2 -translate-x-1/2 text-xs whitespace-nowrap opacity-0 transition-all duration-300 group-hover:-top-6 group-hover:opacity-100"
+              class="pointer-events-none absolute -top-6 left-1/2 -translate-x-1/2 text-xs whitespace-nowrap opacity-0 transition-opacity duration-300 group-hover:opacity-100"
             >
               {{ skill.level }}
             </div>
