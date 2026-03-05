@@ -15,23 +15,15 @@ const isOpen = ref(false);
 
 <template>
   <header
-    class="fixed z-10 w-full transform transition-all duration-1000 ease-in-out md:relative md:w-2xs md:translate-x-0"
+    class="fixed z-10 w-full transform ease-in-out md:relative md:w-2xs md:translate-x-0"
     :class="isOpen ? 'translate-x-0' : '-translate-x-full'"
   >
     <div class="absolute inset-0">
-      <div
-        class="sticky top-0 bottom-0 left-0 flex h-screen flex-col bg-neutral-900 transition-colors duration-1000 dark:bg-neutral-950"
-      >
+      <div class="sticky top-0 bottom-0 left-0 flex h-screen flex-col bg-neutral-900 dark:bg-neutral-950">
         <div class="grow overflow-y-auto p-4">
           <section class="flex flex-col items-center gap-y-4 text-neutral-100">
-            <div
-              class="aspect-square h-32 overflow-hidden rounded-full border-8 border-neutral-700 transition-colors duration-1000 dark:border-neutral-800"
-            >
-              <img
-                :src="aboutData.portrait"
-                :alt="aboutData.name"
-                class="h-full w-full object-cover"
-              />
+            <div class="aspect-square h-32 overflow-hidden rounded-full border-8 border-neutral-700 dark:border-neutral-800">
+              <img :src="aboutData.portrait" :alt="aboutData.name" class="h-full w-full object-cover" />
             </div>
 
             <h2 class="text-center text-xl font-bold">{{ aboutData.name }}</h2>
@@ -56,10 +48,7 @@ const isOpen = ref(false);
                 :key="index"
                 class="group relative flex flex-row items-center gap-2 px-2 py-1 transition-transform duration-300 hover:translate-x-2"
               >
-                <component
-                  :is="item.icon"
-                  class="h-5 w-5 transition-colors duration-300 group-hover:text-gray-700"
-                />
+                <component :is="item.icon" class="h-5 w-5 transition-colors duration-300 group-hover:text-gray-700" />
                 <a
                   @click="isOpen = false"
                   :href="`#${item.section}`"

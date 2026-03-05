@@ -62,35 +62,18 @@ const handleSubmit = async () => {
 </script>
 
 <template>
-  <form
-    @submit.prevent="handleSubmit"
-    class="mx-auto max-w-2xl rounded-lg px-4 py-6 shadow shadow-gray-700"
-  >
+  <form @submit.prevent="handleSubmit" class="mx-auto max-w-2xl rounded-lg px-4 py-6 shadow shadow-gray-700">
     <div class="flex flex-col gap-8 font-mono text-sm">
       <div class="flex w-full flex-col gap-8 md:flex-row">
         <div class="relative w-full">
-          <input
-            v-model="formData.name"
-            id="name"
-            type="text"
-            placeholder="name"
-            class="peer input-text"
-            required
-          />
+          <input v-model="formData.name" id="name" type="text" placeholder="name" class="peer input-text" required />
           <label for="name" class="label-box">
             {{ t('contact.form.name') }}
           </label>
         </div>
 
         <div class="relative w-full">
-          <input
-            v-model="formData.email"
-            id="email"
-            type="email"
-            placeholder="email"
-            class="peer input-text"
-            required
-          />
+          <input v-model="formData.email" id="email" type="email" placeholder="email" class="peer input-text" required />
           <label for="email" class="label-box">
             {{ t('contact.form.email') }}
           </label>
@@ -98,27 +81,14 @@ const handleSubmit = async () => {
       </div>
 
       <div class="relative w-full">
-        <input
-          v-model="formData.subject"
-          id="subject"
-          type="text"
-          placeholder="subject"
-          class="peer input-text"
-          required
-        />
+        <input v-model="formData.subject" id="subject" type="text" placeholder="subject" class="peer input-text" required />
         <label for="subject" class="label-box">
           {{ t('contact.form.subject') }}
         </label>
       </div>
 
       <div class="relative w-full">
-        <textarea
-          v-model="formData.message"
-          id="message"
-          placeholder="message"
-          class="peer input-textarea"
-          required
-        ></textarea>
+        <textarea v-model="formData.message" id="message" placeholder="message" class="peer input-textarea" required></textarea>
         <label for="message" class="label-box">
           {{ t('contact.form.message') }}
         </label>
@@ -127,7 +97,7 @@ const handleSubmit = async () => {
       <button
         type="submit"
         :disabled="formStatus === 'loading'"
-        class="group flex w-full items-center justify-center gap-2 bg-neutral-200 px-1 py-2 transition-all duration-1000 hover:bg-gray-700 hover:text-neutral-100 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-neutral-100 dark:bg-neutral-800"
+        class="group flex w-full items-center justify-center gap-2 bg-neutral-200 px-1 py-2 transition-colors duration-300 hover:bg-gray-700 hover:text-neutral-100 disabled:cursor-not-allowed disabled:bg-gray-700 disabled:text-neutral-100 dark:bg-neutral-800"
       >
         {{ formStatus === 'loading' ? t('contact.form.loading') : t('contact.form.send') }}
         <span

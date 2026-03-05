@@ -1,13 +1,13 @@
 <script setup lang="ts">
 import { useI18n } from 'vue-i18n';
 import { portfolioData } from '@/data/portfolio';
-import ProjectCard from '../Portfolio/ProjectCard.vue';
+import ProjectCard from './ProjectCard.vue';
 
 const { t } = useI18n();
 </script>
 
 <template>
-  <div id="portfolio" class="bg-neutral-200 transition-colors duration-1000 dark:bg-neutral-800">
+  <div id="portfolio" class="bg-neutral-200 dark:bg-neutral-800">
     <section class="mx-auto max-w-7xl px-4 py-8">
       <h2>
         {{ t('nav.portfolio') }}
