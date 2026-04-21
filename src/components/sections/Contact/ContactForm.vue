@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { reactive, ref } from 'vue';
+import { reactive, ref, onMounted } from 'vue';
 import { useI18n } from 'vue-i18n';
+import { useReCaptcha } from 'vue-recaptcha-v3';
 
 const { t } = useI18n();
 
@@ -28,26 +29,53 @@ const setTemporaryStatus = (status: Status, duration: number) => {
   }, duration);
 };
 
+type ReCaptchaInstance = ReturnType<typeof useReCaptcha>;
+let recaptchaInstance: ReCaptchaInstance = undefined;
+
+onMounted(() => {
+  recaptchaInstance = useReCaptcha();
+});
+
 const handleSubmit = async () => {
   formStatus.value = 'loading';
 
   try {
+    if (!recaptchaInstance) {
+      setTemporaryStatus('error', 10000);
+      return;
+    }
+    const { executeRecaptcha, recaptchaLoaded } = recaptchaInstance;
+
+    await recaptchaLoaded();
+
+    const token = await executeRecaptcha('contact');
+    if (!token) {
+      setTemporaryStatus('error', 10000);
+      return;
+    }
+
     const response = await fetch(
-      'https://script.google.com/macros/s/AKfycbxEPaHCEDX20b1bn4p4GhwIJpfk9WRmc7Y3TvwB85hwdkoB0436ftdk_PQi7YsGark/exec',
+      'https://script.google.com/macros/s/AKfycbxbVL_nZdabv74ng3qNbmKXan2VZab5iXi8AcN9gXayvEuIY7Jnof5xdYWTjVIaxFrksw/exec',
       {
         redirect: 'follow',
         method: 'POST',
         headers: {
           'Content-Type': 'text/plain;charset=utf-8'
         },
-        body: JSON.stringify(formData)
+        body: JSON.stringify({
+          ...formData,
+          recaptchaToken: token
+        })
       }
     );
 
     const result = await response.json();
+    console.log('Hello 6', result);
     if (!result.success) {
-      throw new Error(result.error || 'Error desconocido');
+      throw new Error(result.error || 'Unknown error');
     }
+
+    console.log('Hello 7');
 
     setTemporaryStatus('sent', 5000);
 
@@ -81,7 +109,7 @@ const handleSubmit = async () => {
       </div>
 
       <div class="relative w-full">
-        <input v-model="formData.subject" id="subject" type="text" placeholder="subject" class="peer input-text" required />
+        <input v-model="formData.subject" id="subject" type="text" placeholder="subject" class="peer input-text" />
         <label for="subject" class="label-box">
           {{ t('contact.form.subject') }}
         </label>
