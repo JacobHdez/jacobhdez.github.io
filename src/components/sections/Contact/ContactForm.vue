@@ -70,12 +70,9 @@ const handleSubmit = async () => {
     );
 
     const result = await response.json();
-    console.log('Hello 6', result);
     if (!result.success) {
       throw new Error(result.error || 'Unknown error');
     }
-
-    console.log('Hello 7');
 
     setTemporaryStatus('sent', 5000);
 
