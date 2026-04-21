@@ -1,7 +1,7 @@
 {
   "name": "jacobhdez.github.io",
   "private": true,
-  "version": "2.2.1",
+  "version": "2.3.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -10,7 +10,8 @@
   },
   "dependencies": {
     "vue": "^3.5.24",
-    "vue-i18n": "11"
+    "vue-i18n": "11",
+    "vue-recaptcha-v3": "^2.0.1"
   },
   "devDependencies": {
     "@heroicons/vue": "^2.2.0",
