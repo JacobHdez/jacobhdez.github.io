@@ -10,7 +10,7 @@ const app = createApp(App);
 
 app.use(i18n);
 app.use(VueReCaptcha, {
-  siteKey: '6Lf4tbUsAAAAAOxadxbP8vQocBRvKDMAl58Jmjls',
+  siteKey: '6Lepx-ksAAAAANoROh_iNl_gch242phbDCAPba3M',
   loaderOptions: {
     autoHideBadge: true
   }
